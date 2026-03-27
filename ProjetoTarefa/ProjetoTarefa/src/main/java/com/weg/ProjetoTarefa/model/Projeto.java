@@ -26,4 +26,7 @@ public class Projeto {
 
     @Column(name = "duraçao", nullable = false)
     private LocalDate duracao;
+
+    public Projeto(String s, String descricao, LocalDate duracao) {
+    }
 }
