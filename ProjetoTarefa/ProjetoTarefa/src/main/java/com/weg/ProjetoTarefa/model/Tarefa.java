@@ -24,6 +24,10 @@ public class Tarefa {
     @Column(name = "quantidade" , nullable = false)
     private Integer quantidade;
 
+    @ManyToOne
+    @JoinColumn(name = "idProjeto")
+    private Projeto projeto;
+
     public Tarefa(String s, String tipo, Integer quantidade) {
     }
 }

@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -26,6 +28,9 @@ public class Projeto {
 
     @Column(name = "duraçao", nullable = false)
     private LocalDate duracao;
+
+    @OneToMany(mappedBy = "projeto", cascade = CascadeType.ALL)
+    private List<Tarefa> tarefas = new ArrayList<>();
 
     public Projeto(String s, String descricao, LocalDate duracao) {
     }
