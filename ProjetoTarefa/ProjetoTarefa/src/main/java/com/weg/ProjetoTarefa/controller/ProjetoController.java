@@ -28,7 +28,7 @@ public class ProjetoController {
 
     @GetMapping("/{id}")
     public ProjetoResponseDto listarPorId (@PathVariable UUID id) {
-        return service.listarPorId(id)
+        return service.listarPorId(id);
     }
 
     @PostMapping("/{id}")
@@ -36,6 +36,7 @@ public class ProjetoController {
         return service.atualizar(requestDto , id);
     }
 
+    @DeleteMapping("/{id}")
     public void deletar (@PathVariable UUID id) {
         service.deletar(id);
     }
