@@ -23,4 +23,7 @@ public class Tarefa {
 
     @Column(name = "quantidade" , nullable = false)
     private Integer quantidade;
+
+    public Tarefa(String s, String tipo, Integer quantidade) {
+    }
 }
