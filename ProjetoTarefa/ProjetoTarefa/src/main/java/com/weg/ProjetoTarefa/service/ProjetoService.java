@@ -32,7 +32,7 @@ public class ProjetoService {
                 .toList();
     }
 
-    public ProjetoResponseDto listarTodos (UUID id) {
+    public ProjetoResponseDto listarPorId (UUID id) {
         Projeto projeto = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Lista não encontrada"));
 
