@@ -1,4 +1,8 @@
 package com.weg.ProjetoTarefa.dto.TarefaDto;
 
-public class TarefaRequestDto {
+public record TarefaRequestDto (
+        String nomeTarefa,
+        String tipo,
+        Integer quantidade
+){
 }
